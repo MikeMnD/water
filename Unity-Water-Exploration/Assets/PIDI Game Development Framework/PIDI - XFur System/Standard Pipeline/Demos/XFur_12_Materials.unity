@@ -1,0 +1,4028 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 8
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.06
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.18028477, g: 0.22571537, b: 0.30692327, a: 1}
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 9
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AO: 1
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFiltering: 0
+    m_PVRFilteringMode: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 0
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &185311469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 185311471}
+  - component: {fileID: 185311470}
+  m_Layer: 0
+  m_Name: WindZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &185311470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185311469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c197e67c399c0044eb8591c8064063dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wind: 0
+  snow: 1
+  rain: 1
+  windDir: {x: 0.7279883, y: 0.5590604, z: -0.3968431}
+  windIntensity: 0.46
+  windTurbulence: 0.232
+  snowIntensity: 0
+  rainIntensity: 0
+--- !u!4 &185311471
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185311469}
+  m_LocalRotation: {x: -0.18985215, y: -0.8138659, z: -0.42467928, w: -0.34817514}
+  m_LocalPosition: {x: 3.735, y: 0.132, z: 4.465}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -146.019, y: 658.555, z: -133.198}
+--- !u!1 &195100494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 195100498}
+  - component: {fileID: 195100497}
+  - component: {fileID: 195100496}
+  - component: {fileID: 195100495}
+  m_Layer: 0
+  m_Name: Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!23 &195100495
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195100494}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: c63343d296b7b5842b02872548e6ff2e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &195100496
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195100494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &195100497
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195100494}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &195100498
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195100494}
+  m_LocalRotation: {x: 0.6087605, y: -0, z: -0, w: 0.79335415}
+  m_LocalPosition: {x: 0.91, y: 0.73, z: 1.92}
+  m_LocalScale: {x: 1.5670913, y: 1, z: 0.3439804}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 74.976006, y: 0, z: 0}
+--- !u!1 &258580150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 258580151}
+  - component: {fileID: 258580153}
+  - component: {fileID: 258580152}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &258580151
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258580150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1270221698}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -25, y: 0}
+  m_SizeDelta: {x: 50, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &258580152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258580150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &258580153
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258580150}
+--- !u!1001 &300569074
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.603
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 43771032274871984, guid: b8fb2fcef60d4da42b4d7e073fc47726,
+        type: 2}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 1602194147}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Name
+      value: Material_Expo2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_ParentPrefab: {fileID: 100100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1001 &417210458
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.603
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 43771032274871984, guid: b8fb2fcef60d4da42b4d7e073fc47726,
+        type: 2}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 1602194147}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Name
+      value: Material_Expo3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_ParentPrefab: {fileID: 100100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1001 &594127180
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.603
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 43771032274871984, guid: b8fb2fcef60d4da42b4d7e073fc47726,
+        type: 2}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 1602194147}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Name
+      value: Material_Expo7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_ParentPrefab: {fileID: 100100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &594127181 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_PrefabInternal: {fileID: 594127180}
+--- !u!114 &594127183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 594127181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6a1400e628d384ebdce68b3654c7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxModule:
+    moduleState: 1
+    moduleName: FX Module 1.0 (BETA)
+    systemOwner: {fileID: 594127183}
+    snowSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 1
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 10
+      fxSpecSmooth: {r: 0.3, g: 0.3, b: 0.3, a: 0.15}
+      furPenetration: 0.6
+      fxColor: {r: 1, g: 1, b: 1, a: 1}
+      normalFalloff: 0.45
+    bloodSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 0
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 30
+      fxSpecSmooth: {r: 0.15, g: 0, b: 0, a: 0.6}
+      furPenetration: 0.8
+      fxColor: {r: 1, g: 0, b: 0, a: 1}
+      normalFalloff: 0.45
+    waterSettings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    customFX0Settings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    forceUpdateNormals: 0
+    maxIterations: 4
+    vertexBuffer: 512
+    localWindStrength: 0.2
+  lodModule:
+    moduleState: 2
+    moduleName: LOD Module 2.0
+    systemOwner: {fileID: 594127183}
+    lodMode: 0
+    maxDistance: 32
+    XFur_LODLevel: 99
+  physicsModule:
+    moduleState: 2
+    moduleName: Physics Module 2.0 (BETA)
+    systemOwner: {fileID: 594127183}
+    useBasicPhysics: 0
+    useAngularPhysics: 1
+    inertia: 0.3
+    iterations: 45
+    physicsSensitivity: 0.5
+    physicsStrength: 0.2
+    gravityStrength: 0.132
+  coatingModule:
+    moduleState: 2
+    moduleName: Randomization Module 1.0 (BETA)
+    systemOwner: {fileID: 594127183}
+    coatingSettings:
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 0}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 0}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.25
+        furmatFurOcclusion: 0.5
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.25
+        furmatFurThickness: 0.25
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+        furmatFurRimPower: 0.2
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0,
+          type: 3}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 2800000, guid: ce0ab2fe2c470de40b65a153599231e6,
+          type: 3}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0, g: 0, b: 0, a: 1}
+        furmatFurSpecular: {r: 0.25735295, g: 0.18672444, b: 0.13246109, a: 1}
+        furmatBaseColor: {r: 0.19117647, g: 0.18947023, b: 0.17571367, a: 1}
+        furmatFurColorA: {r: 0.31617647, g: 0.19608712, b: 0.06741999, a: 1}
+        furmatFurColorB: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.096
+        furmatFurOcclusion: 1
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.19
+        furmatFurThickness: 0.079
+        furmatUV1: 1
+        furmatFurUV1: 8
+        furmatFurUV2: 2
+        originalSynch: 0
+        furmatFurRim: {r: 0.22794116, g: 0.18471093, b: 0.043576986, a: 1}
+        furmatFurRimPower: 0.81
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    profileVariation: 0
+  customModules: []
+  skinRenderer: {fileID: 0}
+  database: {fileID: 11400000, guid: b8fb2fcef60d4da42b4d7e073fc47726, type: 2}
+  srpMode: 0
+  instancedMode: 0
+  manualMeshIndex: -1
+  rend: {fileID: 594127184}
+  materialProfiles:
+  - fullShadowLayers: 12
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    furmatType: 0
+    furmatIndex: 0
+    furmatSamples: 16
+    furmatTriplanar: 0
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 2
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 0
+    furmatReadFurNoise: 0
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.5
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 0}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 0}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.25
+    furmatFurOcclusion: 0.5
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.25
+    furmatFurThickness: 0.25
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 0
+    furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    furmatFurRimPower: 0.2
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+  - fullShadowLayers: 16
+    enableFullShadows: 1
+    buffShadowLayers: 16
+    originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    furmatType: 2
+    furmatIndex: 1
+    furmatSamples: 2
+    furmatTriplanar: 1
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 1
+    furmatReadBaseSkin: 1
+    furmatReadBaseFur: 1
+    furmatReadFurNoise: 1
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.376
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 2800000, guid: ce0ab2fe2c470de40b65a153599231e6, type: 3}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0, g: 0, b: 0, a: 1}
+    furmatFurSpecular: {r: 0.25735295, g: 0.18672444, b: 0.13246109, a: 1}
+    furmatBaseColor: {r: 0.19117647, g: 0.18947023, b: 0.17571367, a: 1}
+    furmatFurColorA: {r: 0.31617647, g: 0.19608712, b: 0.06741999, a: 1}
+    furmatFurColorB: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.096
+    furmatFurOcclusion: 1
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.19
+    furmatFurThickness: 0.079
+    furmatUV1: 1
+    furmatFurUV1: 8
+    furmatFurUV2: 2
+    originalSynch: 1
+    furmatFurRim: {r: 0.22794116, g: 0.18471093, b: 0.043576986, a: 1}
+    furmatFurRimPower: 0.81
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 1}
+  originalMesh: {fileID: 4300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  materialProfileIndex: 1
+  updateDynamically: 1
+  bumpEmpty: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+  folds: 01000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!23 &594127184 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426,
+    type: 3}
+  m_PrefabInternal: {fileID: 594127180}
+--- !u!1 &675583074 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_PrefabInternal: {fileID: 978880091}
+--- !u!114 &675583075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 675583074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6a1400e628d384ebdce68b3654c7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxModule:
+    moduleState: 1
+    moduleName: FX Module 1.0 (BETA)
+    systemOwner: {fileID: 675583075}
+    snowSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 1
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 10
+      fxSpecSmooth: {r: 0.3, g: 0.3, b: 0.3, a: 0.15}
+      furPenetration: 0.6
+      fxColor: {r: 1, g: 1, b: 1, a: 1}
+      normalFalloff: 0.45
+    bloodSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 0
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 30
+      fxSpecSmooth: {r: 0.15, g: 0, b: 0, a: 0.6}
+      furPenetration: 0.8
+      fxColor: {r: 1, g: 0, b: 0, a: 1}
+      normalFalloff: 0.45
+    waterSettings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    customFX0Settings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    forceUpdateNormals: 0
+    maxIterations: 4
+    vertexBuffer: 512
+    localWindStrength: 0.1
+  lodModule:
+    moduleState: 2
+    moduleName: LOD Module 2.0
+    systemOwner: {fileID: 675583075}
+    lodMode: 0
+    maxDistance: 32
+    XFur_LODLevel: 99
+  physicsModule:
+    moduleState: 2
+    moduleName: Physics Module 2.0 (BETA)
+    systemOwner: {fileID: 675583075}
+    useBasicPhysics: 0
+    useAngularPhysics: 1
+    inertia: 0.3
+    iterations: 45
+    physicsSensitivity: 0.5
+    physicsStrength: 0.2
+    gravityStrength: 0.132
+  coatingModule:
+    moduleState: 2
+    moduleName: Randomization Module 1.0 (BETA)
+    systemOwner: {fileID: 675583075}
+    coatingSettings:
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 0}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 0}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.25
+        furmatFurOcclusion: 0.5
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.25
+        furmatFurThickness: 0.25
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+        furmatFurRimPower: 0.2
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0,
+          type: 3}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 2800000, guid: 5f35af982a63e4442a90ec3f7d83fdc3,
+          type: 3}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.14705884, g: 0.14705884, b: 0.14705884, a: 1}
+        furmatFurSpecular: {r: 0.5661765, g: 0.5214451, b: 0.48707828, a: 1}
+        furmatBaseColor: {r: 0.5955882, g: 0.5406201, b: 0.44231182, a: 1}
+        furmatFurColorA: {r: 0.625, g: 0.47502542, b: 0.20680147, a: 1}
+        furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+        furmatSmoothness: 0.799
+        furmatFurSmoothness: 0.147
+        furmatFurOcclusion: 1
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.28
+        furmatFurThickness: 0.217
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.58823526, g: 0.58823526, b: 0.58823526, a: 1}
+        furmatFurRimPower: 0.273
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    profileVariation: 0
+  customModules: []
+  skinRenderer: {fileID: 0}
+  database: {fileID: 11400000, guid: b8fb2fcef60d4da42b4d7e073fc47726, type: 2}
+  srpMode: 0
+  instancedMode: 0
+  manualMeshIndex: -1
+  rend: {fileID: 675583076}
+  materialProfiles:
+  - fullShadowLayers: 12
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    furmatType: 0
+    furmatIndex: 0
+    furmatSamples: 16
+    furmatTriplanar: 0
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 2
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 0
+    furmatReadFurNoise: 0
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.5
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 0}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 0}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.25
+    furmatFurOcclusion: 0.5
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.25
+    furmatFurThickness: 0.25
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 0
+    furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    furmatFurRimPower: 0.2
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+  - fullShadowLayers: 16
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    furmatType: 2
+    furmatIndex: 1
+    furmatSamples: 2
+    furmatTriplanar: 1
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 0
+    furmatReadBaseSkin: 1
+    furmatReadBaseFur: 1
+    furmatReadFurNoise: 1
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.358
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 2800000, guid: 5f35af982a63e4442a90ec3f7d83fdc3, type: 3}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.14705884, g: 0.14705884, b: 0.14705884, a: 1}
+    furmatFurSpecular: {r: 0.5661765, g: 0.5214451, b: 0.48707828, a: 1}
+    furmatBaseColor: {r: 0.5955882, g: 0.5406201, b: 0.44231182, a: 1}
+    furmatFurColorA: {r: 0.625, g: 0.47502542, b: 0.20680147, a: 1}
+    furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+    furmatSmoothness: 0.799
+    furmatFurSmoothness: 0.147
+    furmatFurOcclusion: 1
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.28
+    furmatFurThickness: 0.217
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 1
+    furmatFurRim: {r: 0.58823526, g: 0.58823526, b: 0.58823526, a: 1}
+    furmatFurRimPower: 0.273
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0, y: 0, z: 0, w: 0}
+  originalMesh: {fileID: 4300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  materialProfileIndex: 1
+  updateDynamically: 1
+  bumpEmpty: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+  folds: 01000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!23 &675583076 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426,
+    type: 3}
+  m_PrefabInternal: {fileID: 978880091}
+--- !u!1 &689320587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 689320589}
+  - component: {fileID: 689320588}
+  m_Layer: 0
+  m_Name: MainScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &689320588
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 689320587}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c33aa8001c6c7ba41bee9c8f73290478, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!4 &689320589
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 689320587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.4297378, y: 1.5952964, z: 7.092699}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1270221698}
+  - {fileID: 2090696376}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &709455603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 709455605}
+  - component: {fileID: 709455604}
+  m_Layer: 0
+  m_Name: Light Probe Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!220 &709455604
+LightProbeGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709455603}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1, z: -1}
+  - {x: 1, y: -1, z: 1}
+  - {x: 1, y: -1, z: -1}
+  - {x: -1, y: 1, z: 1}
+  - {x: -1, y: 1, z: -1}
+  - {x: -1, y: -1, z: 1}
+  - {x: -1, y: -1, z: -1}
+--- !u!4 &709455605
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709455603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.938, y: -0.183, z: 3.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &786906702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 786906705}
+  - component: {fileID: 786906704}
+  - component: {fileID: 786906703}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &786906703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786906702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &786906704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786906702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &786906705
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786906702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &846510838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 846510842}
+  - component: {fileID: 846510841}
+  - component: {fileID: 846510840}
+  - component: {fileID: 846510839}
+  m_Layer: 0
+  m_Name: Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!23 &846510839
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846510838}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: c63343d296b7b5842b02872548e6ff2e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &846510840
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846510838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &846510841
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846510838}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &846510842
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846510838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.91, y: -0.9, z: 4.31}
+  m_LocalScale: {x: 1.5682114, y: 1, z: 0.41951913}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &897514314 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_PrefabInternal: {fileID: 300569074}
+--- !u!114 &897514315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 897514314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6a1400e628d384ebdce68b3654c7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxModule:
+    moduleState: 1
+    moduleName: FX Module 1.0 (BETA)
+    systemOwner: {fileID: 897514315}
+    snowSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 1
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 10
+      fxSpecSmooth: {r: 0.3, g: 0.3, b: 0.3, a: 0.15}
+      furPenetration: 0.6
+      fxColor: {r: 1, g: 1, b: 1, a: 1}
+      normalFalloff: 0.45
+    bloodSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 0
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 30
+      fxSpecSmooth: {r: 0.15, g: 0, b: 0, a: 0.6}
+      furPenetration: 0.8
+      fxColor: {r: 1, g: 0, b: 0, a: 1}
+      normalFalloff: 0.45
+    waterSettings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    customFX0Settings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    forceUpdateNormals: 0
+    maxIterations: 4
+    vertexBuffer: 512
+    localWindStrength: 0.1
+  lodModule:
+    moduleState: 2
+    moduleName: LOD Module 2.0
+    systemOwner: {fileID: 897514315}
+    lodMode: 0
+    maxDistance: 32
+    XFur_LODLevel: 99
+  physicsModule:
+    moduleState: 2
+    moduleName: Physics Module 2.0 (BETA)
+    systemOwner: {fileID: 897514315}
+    useBasicPhysics: 0
+    useAngularPhysics: 1
+    inertia: 0.3
+    iterations: 45
+    physicsSensitivity: 0.5
+    physicsStrength: 0.2
+    gravityStrength: 0.08
+  coatingModule:
+    moduleState: 2
+    moduleName: Randomization Module 1.0 (BETA)
+    systemOwner: {fileID: 897514315}
+    coatingSettings:
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 0}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 0}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.25
+        furmatFurOcclusion: 0.5
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.25
+        furmatFurThickness: 0.25
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+        furmatFurRimPower: 0.2
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0,
+          type: 3}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 2800000, guid: 6d146c8e18f869c4798772e95cdea4c8,
+          type: 3}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.39705884, g: 0.3838504, b: 0.37370244, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 0, g: 0, b: 0, a: 1}
+        furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.056
+        furmatFurOcclusion: 1
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.58
+        furmatFurThickness: 0.147
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 3
+        originalSynch: 0
+        furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+        furmatFurRimPower: 0.599
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    profileVariation: 0
+  customModules: []
+  skinRenderer: {fileID: 0}
+  database: {fileID: 11400000, guid: b8fb2fcef60d4da42b4d7e073fc47726, type: 2}
+  srpMode: 0
+  instancedMode: 0
+  manualMeshIndex: -1
+  rend: {fileID: 897514316}
+  materialProfiles:
+  - fullShadowLayers: 12
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    furmatType: 0
+    furmatIndex: 0
+    furmatSamples: 16
+    furmatTriplanar: 0
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 0
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 0
+    furmatReadFurNoise: 0
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.5
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 0}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 0}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.25
+    furmatFurOcclusion: 0.5
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.25
+    furmatFurThickness: 0.25
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 0
+    furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    furmatFurRimPower: 0.2
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+  - fullShadowLayers: 16
+    enableFullShadows: 1
+    buffShadowLayers: 16
+    originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    furmatType: 2
+    furmatIndex: 1
+    furmatSamples: 2
+    furmatTriplanar: 1
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 1
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 1
+    furmatReadFurNoise: 1
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.818
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 2800000, guid: 6d146c8e18f869c4798772e95cdea4c8, type: 3}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.39705884, g: 0.3838504, b: 0.37370244, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 0, g: 0, b: 0, a: 1}
+    furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.056
+    furmatFurOcclusion: 1
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.58
+    furmatFurThickness: 0.147
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 3
+    originalSynch: 1
+    furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    furmatFurRimPower: 0.599
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0, y: 0, z: 0, w: 0}
+  originalMesh: {fileID: 4300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  materialProfileIndex: 1
+  updateDynamically: 1
+  bumpEmpty: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+  folds: 01000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!23 &897514316 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426,
+    type: 3}
+  m_PrefabInternal: {fileID: 300569074}
+--- !u!1001 &978880091
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.603
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 43771032274871984, guid: b8fb2fcef60d4da42b4d7e073fc47726,
+        type: 2}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 1586059611}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Name
+      value: Material_Expo4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_ParentPrefab: {fileID: 100100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &1056971188 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_PrefabInternal: {fileID: 417210458}
+--- !u!114 &1056971189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1056971188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6a1400e628d384ebdce68b3654c7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxModule:
+    moduleState: 1
+    moduleName: FX Module 1.0 (BETA)
+    systemOwner: {fileID: 1056971189}
+    snowSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 1
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 10
+      fxSpecSmooth: {r: 0.3, g: 0.3, b: 0.3, a: 0.15}
+      furPenetration: 0.6
+      fxColor: {r: 1, g: 1, b: 1, a: 1}
+      normalFalloff: 0.45
+    bloodSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 0
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 30
+      fxSpecSmooth: {r: 0.15, g: 0, b: 0, a: 0.6}
+      furPenetration: 0.8
+      fxColor: {r: 1, g: 0, b: 0, a: 1}
+      normalFalloff: 0.45
+    waterSettings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    customFX0Settings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    forceUpdateNormals: 0
+    maxIterations: 4
+    vertexBuffer: 512
+    localWindStrength: 0.2
+  lodModule:
+    moduleState: 2
+    moduleName: LOD Module 2.0
+    systemOwner: {fileID: 1056971189}
+    lodMode: 0
+    maxDistance: 32
+    XFur_LODLevel: 99
+  physicsModule:
+    moduleState: 2
+    moduleName: Physics Module 2.0 (BETA)
+    systemOwner: {fileID: 1056971189}
+    useBasicPhysics: 0
+    useAngularPhysics: 1
+    inertia: 0.3
+    iterations: 45
+    physicsSensitivity: 0.5
+    physicsStrength: 0.2
+    gravityStrength: 0.132
+  coatingModule:
+    moduleState: 2
+    moduleName: Randomization Module 1.0 (BETA)
+    systemOwner: {fileID: 1056971189}
+    coatingSettings:
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 0}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 0}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.25
+        furmatFurOcclusion: 0.5
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.25
+        furmatFurThickness: 0.25
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+        furmatFurRimPower: 0.2
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0,
+          type: 3}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 2800000, guid: 358303cf74532c4479f7c0fdfaeba4e1,
+          type: 3}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.3897059, g: 0.27303126, b: 0.183391, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 0.016436001, g: 0.24461278, b: 0.5588235, a: 1}
+        furmatFurColorB: {r: 0.07352942, g: 1, b: 0.6549695, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.424
+        furmatFurOcclusion: 1
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.15
+        furmatFurThickness: 0.118
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.41911763, g: 0.73559844, b: 1, a: 1}
+        furmatFurRimPower: 0.52
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    profileVariation: 0
+  customModules: []
+  skinRenderer: {fileID: 0}
+  database: {fileID: 11400000, guid: b8fb2fcef60d4da42b4d7e073fc47726, type: 2}
+  srpMode: 0
+  instancedMode: 0
+  manualMeshIndex: -1
+  rend: {fileID: 1056971190}
+  materialProfiles:
+  - fullShadowLayers: 12
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    furmatType: 0
+    furmatIndex: 0
+    furmatSamples: 16
+    furmatTriplanar: 0
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 2
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 0
+    furmatReadFurNoise: 0
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.5
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 0}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 0}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.25
+    furmatFurOcclusion: 0.5
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.25
+    furmatFurThickness: 0.25
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 0
+    furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    furmatFurRimPower: 0.2
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+  - fullShadowLayers: 16
+    enableFullShadows: 1
+    buffShadowLayers: 16
+    originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    furmatType: 2
+    furmatIndex: 1
+    furmatSamples: 2
+    furmatTriplanar: 1
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 1
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 1
+    furmatReadFurNoise: 1
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.728
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 2800000, guid: 358303cf74532c4479f7c0fdfaeba4e1, type: 3}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.3897059, g: 0.27303126, b: 0.183391, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 0.016436001, g: 0.24461278, b: 0.5588235, a: 1}
+    furmatFurColorB: {r: 0.07352942, g: 1, b: 0.6549695, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.424
+    furmatFurOcclusion: 1
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.15
+    furmatFurThickness: 0.118
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 1
+    furmatFurRim: {r: 0.41911763, g: 0.73559844, b: 1, a: 1}
+    furmatFurRimPower: 0.52
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0, y: 0, z: 0, w: 0}
+  originalMesh: {fileID: 4300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  materialProfileIndex: 1
+  updateDynamically: 1
+  bumpEmpty: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+  folds: 01000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!23 &1056971190 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426,
+    type: 3}
+  m_PrefabInternal: {fileID: 417210458}
+--- !u!1001 &1184154959
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.603
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 43771032274871984, guid: b8fb2fcef60d4da42b4d7e073fc47726,
+        type: 2}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 1586059611}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Name
+      value: Material_Expo6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_ParentPrefab: {fileID: 100100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &1184154960 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_PrefabInternal: {fileID: 1184154959}
+--- !u!114 &1184154962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1184154960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6a1400e628d384ebdce68b3654c7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxModule:
+    moduleState: 1
+    moduleName: FX Module 1.0 (BETA)
+    systemOwner: {fileID: 1184154962}
+    snowSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 1
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 10
+      fxSpecSmooth: {r: 0.3, g: 0.3, b: 0.3, a: 0.15}
+      furPenetration: 0.6
+      fxColor: {r: 1, g: 1, b: 1, a: 1}
+      normalFalloff: 0.45
+    bloodSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 0
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 30
+      fxSpecSmooth: {r: 0.15, g: 0, b: 0, a: 0.6}
+      furPenetration: 0.8
+      fxColor: {r: 1, g: 0, b: 0, a: 1}
+      normalFalloff: 0.45
+    waterSettings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    customFX0Settings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    forceUpdateNormals: 0
+    maxIterations: 4
+    vertexBuffer: 512
+    localWindStrength: 0.2
+  lodModule:
+    moduleState: 2
+    moduleName: LOD Module 2.0
+    systemOwner: {fileID: 1184154962}
+    lodMode: 0
+    maxDistance: 32
+    XFur_LODLevel: 99
+  physicsModule:
+    moduleState: 2
+    moduleName: Physics Module 2.0 (BETA)
+    systemOwner: {fileID: 1184154962}
+    useBasicPhysics: 0
+    useAngularPhysics: 1
+    inertia: 0.3
+    iterations: 45
+    physicsSensitivity: 0.5
+    physicsStrength: 0.2
+    gravityStrength: 0.132
+  coatingModule:
+    moduleState: 2
+    moduleName: Randomization Module 1.0 (BETA)
+    systemOwner: {fileID: 1184154962}
+    coatingSettings:
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 0}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 0}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.25
+        furmatFurOcclusion: 0.5
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.25
+        furmatFurThickness: 0.25
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+        furmatFurRimPower: 0.2
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0,
+          type: 3}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 2800000, guid: cbd773f7f9d0a274bbc7ea1f262d8eb6,
+          type: 3}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0, g: 0, b: 0, a: 1}
+        furmatFurSpecular: {r: 0.25735295, g: 0.18672444, b: 0.13246109, a: 1}
+        furmatBaseColor: {r: 0.19117647, g: 0.18947023, b: 0.17571367, a: 1}
+        furmatFurColorA: {r: 0.21323532, g: 0.1897059, b: 0, a: 1}
+        furmatFurColorB: {r: 0.625, g: 0.625, b: 0.625, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.096
+        furmatFurOcclusion: 1
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.24
+        furmatFurThickness: 0.059
+        furmatUV1: 1
+        furmatFurUV1: 3
+        furmatFurUV2: 2
+        originalSynch: 0
+        furmatFurRim: {r: 0.52205884, g: 0.47705376, b: 0.33012545, a: 1}
+        furmatFurRimPower: 0.81
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    profileVariation: 0
+  customModules: []
+  skinRenderer: {fileID: 0}
+  database: {fileID: 11400000, guid: b8fb2fcef60d4da42b4d7e073fc47726, type: 2}
+  srpMode: 0
+  instancedMode: 0
+  manualMeshIndex: -1
+  rend: {fileID: 1184154963}
+  materialProfiles:
+  - fullShadowLayers: 12
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    furmatType: 0
+    furmatIndex: 0
+    furmatSamples: 16
+    furmatTriplanar: 0
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 2
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 0
+    furmatReadFurNoise: 0
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.5
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 0}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 0}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.25
+    furmatFurOcclusion: 0.5
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.25
+    furmatFurThickness: 0.25
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 0
+    furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    furmatFurRimPower: 0.2
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+  - fullShadowLayers: 12
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    furmatType: 2
+    furmatIndex: 1
+    furmatSamples: 2
+    furmatTriplanar: 1
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 0
+    furmatReadBaseSkin: 1
+    furmatReadBaseFur: 1
+    furmatReadFurNoise: 1
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.453
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 2800000, guid: cbd773f7f9d0a274bbc7ea1f262d8eb6, type: 3}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0, g: 0, b: 0, a: 1}
+    furmatFurSpecular: {r: 0.25735295, g: 0.18672444, b: 0.13246109, a: 1}
+    furmatBaseColor: {r: 0.19117647, g: 0.18947023, b: 0.17571367, a: 1}
+    furmatFurColorA: {r: 0.21323532, g: 0.1897059, b: 0, a: 1}
+    furmatFurColorB: {r: 0.625, g: 0.625, b: 0.625, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.096
+    furmatFurOcclusion: 1
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.24
+    furmatFurThickness: 0.059
+    furmatUV1: 1
+    furmatFurUV1: 3
+    furmatFurUV2: 2
+    originalSynch: 1
+    furmatFurRim: {r: 0.52205884, g: 0.47705376, b: 0.33012545, a: 1}
+    furmatFurRimPower: 0.81
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 1}
+  originalMesh: {fileID: 4300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  materialProfileIndex: 1
+  updateDynamically: 1
+  bumpEmpty: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+  folds: 01000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!23 &1184154963 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426,
+    type: 3}
+  m_PrefabInternal: {fileID: 1184154959}
+--- !u!1 &1270221694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1270221698}
+  - component: {fileID: 1270221697}
+  - component: {fileID: 1270221696}
+  - component: {fileID: 1270221695}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1270221695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270221694}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1270221696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270221694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1024, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1270221697
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270221694}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 1
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1270221698
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270221694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 2034803246}
+  - {fileID: 258580151}
+  m_Father: {fileID: 689320589}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1409844277
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.603
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 43771032274871984, guid: b8fb2fcef60d4da42b4d7e073fc47726,
+        type: 2}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 1602194147}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Name
+      value: Material_Expo1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_ParentPrefab: {fileID: 100100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &1409844278 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_PrefabInternal: {fileID: 1409844277}
+--- !u!114 &1409844279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409844278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6a1400e628d384ebdce68b3654c7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxModule:
+    moduleState: 1
+    moduleName: FX Module 1.0 (BETA)
+    systemOwner: {fileID: 1409844279}
+    snowSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 1
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 10
+      fxSpecSmooth: {r: 0.3, g: 0.3, b: 0.3, a: 0.15}
+      furPenetration: 0.6
+      fxColor: {r: 1, g: 1, b: 1, a: 1}
+      normalFalloff: 0.45
+    bloodSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 0
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 30
+      fxSpecSmooth: {r: 0.15, g: 0, b: 0, a: 0.6}
+      furPenetration: 0.8
+      fxColor: {r: 1, g: 0, b: 0, a: 1}
+      normalFalloff: 0.45
+    waterSettings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    customFX0Settings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    forceUpdateNormals: 0
+    maxIterations: 4
+    vertexBuffer: 512
+    localWindStrength: 0.1
+  lodModule:
+    moduleState: 2
+    moduleName: LOD Module 2.0
+    systemOwner: {fileID: 1409844279}
+    lodMode: 0
+    maxDistance: 32
+    XFur_LODLevel: 99
+  physicsModule:
+    moduleState: 2
+    moduleName: Physics Module 2.0 (BETA)
+    systemOwner: {fileID: 1409844279}
+    useBasicPhysics: 0
+    useAngularPhysics: 1
+    inertia: 0.3
+    iterations: 45
+    physicsSensitivity: 0.5
+    physicsStrength: 0.2
+    gravityStrength: 0
+  coatingModule:
+    moduleState: 2
+    moduleName: Randomization Module 1.0 (BETA)
+    systemOwner: {fileID: 1409844279}
+    coatingSettings:
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 0}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 0}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.25
+        furmatFurOcclusion: 0.5
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.25
+        furmatFurThickness: 0.25
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+        furmatFurRimPower: 0.2
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0,
+          type: 3}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 2800000, guid: 6d146c8e18f869c4798772e95cdea4c8,
+          type: 3}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.3897059, g: 0.27303126, b: 0.183391, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 0.41911763, g: 0.26379752, b: 0.030817477, a: 1}
+        furmatFurColorB: {r: 0.9411765, g: 0.68287796, b: 0.4844291, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.424
+        furmatFurOcclusion: 1
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.42
+        furmatFurThickness: 0.214
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.33823532, g: 0.28633368, b: 0.11689014, a: 1}
+        furmatFurRimPower: 0.599
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    profileVariation: 0
+  customModules: []
+  skinRenderer: {fileID: 0}
+  database: {fileID: 11400000, guid: b8fb2fcef60d4da42b4d7e073fc47726, type: 2}
+  srpMode: 0
+  instancedMode: 0
+  manualMeshIndex: -1
+  rend: {fileID: 1409844281}
+  materialProfiles:
+  - fullShadowLayers: 8
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    furmatType: 0
+    furmatIndex: 0
+    furmatSamples: 16
+    furmatTriplanar: 0
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 0
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 0
+    furmatReadFurNoise: 0
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.5
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 0}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 0}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.25
+    furmatFurOcclusion: 0.5
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.25
+    furmatFurThickness: 0.25
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 0
+    furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    furmatFurRimPower: 0.2
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+  - fullShadowLayers: 16
+    enableFullShadows: 1
+    buffShadowLayers: 16
+    originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    furmatType: 2
+    furmatIndex: 1
+    furmatSamples: 2
+    furmatTriplanar: 1
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 1
+    furmatReadBaseSkin: 1
+    furmatReadBaseFur: 1
+    furmatReadFurNoise: 1
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.453
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 2800000, guid: 6d146c8e18f869c4798772e95cdea4c8, type: 3}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.3897059, g: 0.27303126, b: 0.183391, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 0.41911763, g: 0.26379752, b: 0.030817477, a: 1}
+    furmatFurColorB: {r: 0.9411765, g: 0.68287796, b: 0.4844291, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.424
+    furmatFurOcclusion: 1
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.42
+    furmatFurThickness: 0.214
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 1
+    furmatFurRim: {r: 0.33823532, g: 0.28633368, b: 0.11689014, a: 1}
+    furmatFurRimPower: 0.599
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0, y: 0, z: 0, w: 0}
+  originalMesh: {fileID: 4300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  materialProfileIndex: 1
+  updateDynamically: 1
+  bumpEmpty: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+  folds: 01000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!23 &1409844281 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426,
+    type: 3}
+  m_PrefabInternal: {fileID: 1409844277}
+--- !u!1001 &1411741870
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.961
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.603
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 43771032274871984, guid: b8fb2fcef60d4da42b4d7e073fc47726,
+        type: 2}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 1586059611}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Name
+      value: Material_Expo5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    - target: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_ParentPrefab: {fileID: 100100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_IsPrefabParent: 0
+--- !u!21 &1586059611
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: XFurMaterial_Demo2_Sixteen Samples
+  m_Shader: {fileID: 4800000, guid: 423c19e6434ec7e439ce994bb4b00e4e, type: 3}
+  m_ShaderKeywords: ANISOTROPIC_ON _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurData0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurData1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurFXNoise:
+        m_Texture: {fileID: 2800000, guid: 88a19c1d9668a504f9b76e4c14461382, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurNoiseMap:
+        m_Texture: {fileID: 2800000, guid: 6d146c8e18f869c4798772e95cdea4c8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurPainter:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlossSpecular:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normalmap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AnisotropicOffset: -0.661
+    - _BaseSmoothness: 0.3
+    - _BumpScale: 1
+    - _Cull: 0
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _FurCutoff: 0.174
+    - _FurLength: 0.38
+    - _FurOcclusion: 1
+    - _FurRimStrength: 0.403
+    - _FurSmoothness: 0.4
+    - _FurStep: 32
+    - _FurThin: 0.185
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _HasGlossMap: 0
+    - _LocalWindStrength: 5.7
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SelfCollision: 0
+    - _ShadowLayerIndex: 0
+    - _SkinMode: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TriplanarBias: 0.85
+    - _TriplanarMode: 0
+    - _TriplanarScale: 2
+    - _UV0Scale1: 1
+    - _UV0Scale2: 12
+    - _UV1Scale1: 1
+    - _UV1Scale2: 4
+    - _UV1Scale3: 2
+    - _UV1Scale4: 3
+    - _UV2Grooming: 0
+    - _UV2Painting: 0
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseSpecular: {r: 0.19999424, g: 0.19999424, b: 0.19999424, a: 1}
+    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FurColorA: {r: 1, g: 1, b: 1, a: 1}
+    - _FurColorB: {r: 1, g: 1, b: 1, a: 1}
+    - _FurDirection: {r: 0, g: 0, b: 0, a: 0}
+    - _FurSpecular: {r: 0.2998521, g: 0.2998521, b: 0.2998521, a: 1}
+    - _RimColor: {r: 0.28661972, g: 0.28661972, b: 0.28661972, a: 1}
+--- !u!21 &1602194147
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: XFurMaterial_Demo2_XFurBasePass
+  m_Shader: {fileID: 4800000, guid: b81d2e62a98ad5d4bb059d4d5fe57acc, type: 3}
+  m_ShaderKeywords: ANISOTROPIC_ON _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurData0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurData1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurFXNoise:
+        m_Texture: {fileID: 2800000, guid: 88a19c1d9668a504f9b76e4c14461382, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurNoiseMap:
+        m_Texture: {fileID: 2800000, guid: 6d146c8e18f869c4798772e95cdea4c8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurPainter:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlossSpecular:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normalmap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AnisotropicOffset: -0.661
+    - _BaseSmoothness: 0.3
+    - _BumpScale: 1
+    - _Cull: 0
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _FurCutoff: 0.174
+    - _FurLength: 0.38
+    - _FurOcclusion: 1
+    - _FurRimStrength: 0.403
+    - _FurSmoothness: 0.4
+    - _FurStep: 32
+    - _FurThin: 0.185
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _HasGlossMap: 0
+    - _LocalWindStrength: 5.7
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SelfCollision: 0
+    - _ShadowLayerIndex: 0
+    - _SkinMode: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TriplanarBias: 0.85
+    - _TriplanarMode: 0
+    - _TriplanarScale: 2
+    - _UV0Scale1: 1
+    - _UV0Scale2: 12
+    - _UV1Scale1: 1
+    - _UV1Scale2: 4
+    - _UV1Scale3: 2
+    - _UV1Scale4: 3
+    - _UV2Grooming: 0
+    - _UV2Painting: 0
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseSpecular: {r: 0.19999424, g: 0.19999424, b: 0.19999424, a: 1}
+    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FurColorA: {r: 1, g: 1, b: 1, a: 1}
+    - _FurColorB: {r: 1, g: 1, b: 1, a: 1}
+    - _FurDirection: {r: 0, g: 0, b: 0, a: 0}
+    - _FurSpecular: {r: 0.2998521, g: 0.2998521, b: 0.2998521, a: 1}
+    - _RimColor: {r: 0.28661972, g: 0.28661972, b: 0.28661972, a: 1}
+--- !u!1 &1861598057 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  m_PrefabInternal: {fileID: 1411741870}
+--- !u!114 &1861598058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1861598057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6a1400e628d384ebdce68b3654c7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxModule:
+    moduleState: 1
+    moduleName: FX Module 1.0 (BETA)
+    systemOwner: {fileID: 1861598058}
+    snowSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 1
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 10
+      fxSpecSmooth: {r: 0.3, g: 0.3, b: 0.3, a: 0.15}
+      furPenetration: 0.6
+      fxColor: {r: 1, g: 1, b: 1, a: 1}
+      normalFalloff: 0.45
+    bloodSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 0
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 30
+      fxSpecSmooth: {r: 0.15, g: 0, b: 0, a: 0.6}
+      furPenetration: 0.8
+      fxColor: {r: 1, g: 0, b: 0, a: 1}
+      normalFalloff: 0.45
+    waterSettings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    customFX0Settings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    forceUpdateNormals: 0
+    maxIterations: 4
+    vertexBuffer: 512
+    localWindStrength: 0.3
+  lodModule:
+    moduleState: 2
+    moduleName: LOD Module 2.0
+    systemOwner: {fileID: 1861598058}
+    lodMode: 0
+    maxDistance: 32
+    XFur_LODLevel: 99
+  physicsModule:
+    moduleState: 2
+    moduleName: Physics Module 2.0 (BETA)
+    systemOwner: {fileID: 1861598058}
+    useBasicPhysics: 0
+    useAngularPhysics: 1
+    inertia: 0.3
+    iterations: 45
+    physicsSensitivity: 0.5
+    physicsStrength: 0.2
+    gravityStrength: 0.132
+  coatingModule:
+    moduleState: 2
+    moduleName: Randomization Module 1.0 (BETA)
+    systemOwner: {fileID: 1861598058}
+    coatingSettings:
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 0}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 0}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.25
+        furmatFurOcclusion: 0.5
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.25
+        furmatFurThickness: 0.25
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+        furmatFurRimPower: 0.2
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 16
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0,
+          type: 3}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 2800000, guid: 6d146c8e18f869c4798772e95cdea4c8,
+          type: 3}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+        furmatFurSpecular: {r: 0.3897059, g: 0.27303126, b: 0.183391, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 0.41911763, g: 0.26379752, b: 0.030817477, a: 1}
+        furmatFurColorB: {r: 0.9411765, g: 0.68287796, b: 0.4844291, a: 1}
+        furmatSmoothness: 0.25
+        furmatFurSmoothness: 0.424
+        furmatFurOcclusion: 1
+        furmatFurCutoff: 0.25
+        furmatFurLength: 0.42
+        furmatFurThickness: 0.214
+        furmatUV1: 1
+        furmatFurUV1: 2
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.33823532, g: 0.28633368, b: 0.11689014, a: 1}
+        furmatFurRimPower: 0.599
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    profileVariation: 0
+  customModules: []
+  skinRenderer: {fileID: 0}
+  database: {fileID: 11400000, guid: b8fb2fcef60d4da42b4d7e073fc47726, type: 2}
+  srpMode: 0
+  instancedMode: 0
+  manualMeshIndex: -1
+  rend: {fileID: 1861598059}
+  materialProfiles:
+  - fullShadowLayers: 12
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 203a988bf50ba484f8b0bb302437b551, type: 2}
+    furmatType: 0
+    furmatIndex: 0
+    furmatSamples: 16
+    furmatTriplanar: 0
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 2
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 0
+    furmatReadFurNoise: 0
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.5
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 0}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 0}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.25
+    furmatFurOcclusion: 0.5
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.25
+    furmatFurThickness: 0.25
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 0
+    furmatFurRim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    furmatFurRimPower: 0.2
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+  - fullShadowLayers: 12
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 21f7bc6dd030bd74fbdfca46a4e7e8ef, type: 2}
+    furmatType: 2
+    furmatIndex: 1
+    furmatSamples: 2
+    furmatTriplanar: 1
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 0
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 0
+    furmatReadFurNoise: 0
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 0.453
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 2800000, guid: 6d146c8e18f869c4798772e95cdea4c8, type: 3}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    furmatFurSpecular: {r: 0.3897059, g: 0.27303126, b: 0.183391, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 0.41911763, g: 0.26379752, b: 0.030817477, a: 1}
+    furmatFurColorB: {r: 0.9411765, g: 0.68287796, b: 0.4844291, a: 1}
+    furmatSmoothness: 0.25
+    furmatFurSmoothness: 0.424
+    furmatFurOcclusion: 1
+    furmatFurCutoff: 0.25
+    furmatFurLength: 0.42
+    furmatFurThickness: 0.214
+    furmatUV1: 1
+    furmatFurUV1: 2
+    furmatFurUV2: 4
+    originalSynch: 1
+    furmatFurRim: {r: 0.33823532, g: 0.28633368, b: 0.11689014, a: 1}
+    furmatFurRimPower: 0.599
+    subRenders:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+  originalMesh: {fileID: 4300000, guid: 0dd1641a500f13a4c95fb32893fb2426, type: 3}
+  materialProfileIndex: 1
+  updateDynamically: 1
+  bumpEmpty: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+  folds: 01000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!23 &1861598059 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300000, guid: 0dd1641a500f13a4c95fb32893fb2426,
+    type: 3}
+  m_PrefabInternal: {fileID: 1411741870}
+--- !u!1 &2014159850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2014159852}
+  - component: {fileID: 2014159851}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &2014159851
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014159850}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: 1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &2014159852
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014159850}
+  m_LocalRotation: {x: 0.101388864, y: -0.87984, z: 0.41027606, w: 0.21742919}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 49.994003, y: -152.311, z: 0}
+--- !u!1 &2034803245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2034803246}
+  - component: {fileID: 2034803248}
+  - component: {fileID: 2034803247}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2034803246
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034803245}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1270221698}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000015258789, y: 197}
+  m_SizeDelta: {x: 794, y: 108}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2034803247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034803245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'XFur Studio allows you to easily create complex fur materials and customize
+    them using the XFur System Component. In this scene, all 5 fur materials are just
+    variations over a single, actual Unity material (on the far right).
+
+
+    This allows you to reduce the amount of materials needed for your project considerably
+    by making all the different variations directly on the component. This also allows
+    you to randomize the appearance of the fur materials at runtime!'
+--- !u!222 &2034803248
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034803245}
+--- !u!1 &2090696371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2090696376}
+  - component: {fileID: 2090696375}
+  - component: {fileID: 2090696374}
+  - component: {fileID: 2090696373}
+  - component: {fileID: 2090696372}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &2090696372
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090696371}
+  m_Enabled: 1
+--- !u!124 &2090696373
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090696371}
+  m_Enabled: 1
+--- !u!92 &2090696374
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090696371}
+  m_Enabled: 1
+--- !u!20 &2090696375
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090696371}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.33088237, g: 0.33088237, b: 0.33088237, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 1000
+  field of view: 55
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: 3
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &2090696376
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090696371}
+  m_LocalRotation: {x: -0.09905208, y: 0.88234156, z: -0.21482843, w: -0.4068301}
+  m_LocalPosition: {x: 5.7187796, y: -0.6912799, z: -1.5037165}
+  m_LocalScale: {x: 1.4673283, y: 1.3306719, z: 1.4647647}
+  m_Children: []
+  m_Father: {fileID: 689320589}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 25.992632, y: 215.75635, z: 0.00010638327}

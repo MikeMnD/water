@@ -1,0 +1,107 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WaveSimulator : MonoBehaviour
+{
+
+    public float cycleTime = 1f;
+    private float timer;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        gameObject.AddComponent<MeshRenderer>();
+        gameObject.AddComponent<MeshFilter>();
+        GetComponent<MeshFilter>().mesh = GenerateMesh();
+        timer = Time.time;
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float timePassed = Time.time % cycleTime;
+        float sinOffset = timePassed * Mathf.PI * 2f; //the width of the mesh that the sin passed through this frame
+
+        AdjustMesh(sinOffset);
+
+    }
+
+    private void AdjustMesh(float offset)
+    {
+        Vector3[] verts = GetComponent<MeshFilter>().mesh.vertices;
+        for(int i = 0; i < verts.Length; i += 1)
+        {
+            verts[i].y = 0;
+
+            float xProportion = (verts[i].x / 1f);
+            float rawSinInput = xProportion * 2f * Mathf.PI;
+
+
+            verts[i].y = (Mathf.Sin(rawSinInput + offset)) / 10f;
+
+        }
+        GetComponent<MeshFilter>().mesh.vertices = verts;
+    }
+
+    public Mesh GenerateMesh()
+    {
+        float stepSize = 0.01f;
+
+        int meshWidth = Mathf.CeilToInt(1f / (float)stepSize);
+        int meshHeight = Mathf.CeilToInt(1f / (float)stepSize);
+
+        List<Vector3> vertexList = new List<Vector3>();
+        for (int i = 0; i <= meshHeight; i += 1)
+        {
+            for (int j = 0; j <= meshWidth; j += 1)
+            {
+                vertexList.Add(((new Vector3(1f * ((float)j / meshWidth), 0f, 1f * ((float)i / meshHeight)))));
+            }
+        }
+
+        List<int> triangleIndices = new List<int>();
+        for (int i = 0; i < meshHeight; i += 1)
+        {
+            for (int j = 0; j < meshWidth; j += 1)
+            {
+                int lowerLeft = (i * (meshWidth + 1)) + j;
+                int lowerRight = (i * (meshWidth + 1)) + j + 1;
+                int upperLeft = ((i + 1) * (meshWidth + 1)) + j;
+                int upperRight = ((i + 1) * (meshWidth + 1)) + j + 1;
+
+                //first triangle
+                triangleIndices.Add(lowerLeft);
+                triangleIndices.Add(upperLeft);
+                triangleIndices.Add(upperRight);
+
+                //second triangle
+                triangleIndices.Add(lowerLeft);
+                triangleIndices.Add(upperRight);
+                triangleIndices.Add(lowerRight);
+            }
+        }
+
+        /*
+        //adjust y coordinates of each vertex based on the sin value
+        for (int i = 0; i < vertexList.Count; i += 1)
+        {
+            Vector3 v = new Vector3(vertexList[i].x, vertexList[i].y, vertexList[i].z); //the untransformed point on the mesh in world space
+                                                                                        //float x3figureVal = (a11 * v.x * v.x) + (a12 * v.x * v.z) + (a21 * v.x * v.z) + (a22 * v.z * v.z);
+                                                                                        //float x3globalVal = FigureObject.convertYFigureToWorld(x3figureVal);
+            float x3 = (a11 * v.x * v.x) + (a12 * v.x * v.z) + (a21 * v.x * v.z) + (a22 * v.z * v.z);
+            vertexList[i] = new Vector3(v.x, x3, v.z);
+        }*/
+
+        Vector3[] meshVertices = vertexList.ToArray();
+        int[] meshTriangles = triangleIndices.ToArray();
+        Mesh mesh = new Mesh();
+        mesh.vertices = meshVertices;
+        mesh.triangles = meshTriangles;
+        mesh.RecalculateNormals();
+
+        return mesh;
+    }
+
+}
