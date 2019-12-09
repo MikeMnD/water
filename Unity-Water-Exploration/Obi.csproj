@@ -160,10 +160,10 @@
     <Compile Include="Assets\Obi\Scripts\Utils\ObiUtils.cs" />
     <None Include="Assets\Obi\Scripts\Obi.asmdef" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/dennishenneman/Desktop/Unity-Water-Exploration/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/dennishenneman/Desktop/water/Unity-Water-Exploration/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/dennishenneman/Desktop/Unity-Water-Exploration/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/dennishenneman/Desktop/water/Unity-Water-Exploration/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

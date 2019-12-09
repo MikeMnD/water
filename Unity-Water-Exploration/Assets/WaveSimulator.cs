@@ -6,6 +6,7 @@ public class WaveSimulator : MonoBehaviour
 {
 
     public float cycleTime = 1f;
+    public float waveLength = 0.15f;
     private float timer;
 
     // Start is called before the first frame update
@@ -15,6 +16,8 @@ public class WaveSimulator : MonoBehaviour
         gameObject.AddComponent<MeshFilter>();
         GetComponent<MeshFilter>().mesh = GenerateMesh();
         timer = Time.time;
+        gameObject.AddComponent<MeshCollider>();
+        GetComponent<MeshCollider>().convex = true;
 
     }
 
@@ -26,6 +29,14 @@ public class WaveSimulator : MonoBehaviour
 
         AdjustMesh(sinOffset);
 
+        /*
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            GameObject splash = new GameObject();
+            splash.AddComponent<Splash>();
+            splash.GetComponent<Splash>().water = gameObject;
+        }*/
+
     }
 
     private void AdjustMesh(float offset)
@@ -35,11 +46,11 @@ public class WaveSimulator : MonoBehaviour
         {
             verts[i].y = 0;
 
-            float xProportion = (verts[i].x / 1f);
+            float xProportion = (verts[i].x / waveLength);
             float rawSinInput = xProportion * 2f * Mathf.PI;
 
 
-            verts[i].y = (Mathf.Sin(rawSinInput + offset)) / 10f;
+            verts[i].y += (Mathf.Sin(rawSinInput + offset)) / (10f * (0.5f/waveLength));
 
         }
         GetComponent<MeshFilter>().mesh.vertices = verts;
@@ -102,6 +113,27 @@ public class WaveSimulator : MonoBehaviour
         mesh.RecalculateNormals();
 
         return mesh;
+    }
+
+
+    public void MakeSplash(GameObject splashingObject)
+    {
+        float yVelocity = Mathf.Abs(splashingObject.GetComponent<Rigidbody>().velocity.y);
+        print("Y VELOCITY AT COLLISION IS: " + yVelocity.ToString());
+
+        float waveAmp = 0.045f * yVelocity;
+        float dampingCoef =  0.60f - (Mathf.Clamp(yVelocity, 0f, 10f) * (2f/50f));  //y velocity mapped to 0.60-0.20
+        float wavelength = splashingObject.GetComponent<Collider>().bounds.extents.x / 2f; //quarter the width of the colliding object
+        Vector3 splashPoint = splashingObject.transform.position;
+        splashPoint = new Vector3(splashPoint.x / 16f, 0f, splashPoint.z /16f);
+
+        GameObject splash = new GameObject();
+        splash.AddComponent<Splash>();
+        splash.GetComponent<Splash>().water = gameObject;
+        splash.GetComponent<Splash>().SetAmplitude(waveAmp);
+        splash.GetComponent<Splash>().SetDampeningCoef(dampingCoef);
+        splash.GetComponent<Splash>().SetWavelength(waveLength);
+        splash.GetComponent<Splash>().SetSplashPoint(splashPoint);
     }
 
 }

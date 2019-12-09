@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &56500731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -271,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &124841864
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &131529203
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -695,6 +695,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1204554575}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &576794924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576794923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5e5798582ec4bcbbdaab359ae5041a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cycleTime: 5
+  waveLength: 0.225
 --- !u!1 &610206133
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,13 +969,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalRotation: {x: 0.18724619, y: 0.5976265, z: -0.11202493, w: 0.77151275}
+  m_LocalPosition: {x: -5.32, y: 5.35, z: 5.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 25.013, y: 76.239, z: 3.223}
 --- !u!1 &1009654929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterProDaytime
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
+      propertyPath: m_TagString
+      value: waterSurface
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1265,7 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150aabbdc6d004c67b2c1e24e9d2ea66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpherePrefab: {fileID: 3817966043445672320, guid: fa134d50e3d68414fb40f2883ede5ba4,
+  SpherePrefab: {fileID: 3817966043445672320, guid: 55c2662aba0e043fe962fc8e8f7b9ae9,
     type: 3}
 --- !u!4 &1572830095
 Transform:
@@ -1280,6 +1298,98 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1690027204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1690027208}
+  - component: {fileID: 1690027207}
+  - component: {fileID: 1690027206}
+  - component: {fileID: 1690027205}
+  m_Layer: 0
+  m_Name: Sphere (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &1690027205
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690027204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1690027206
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690027204}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1690027207
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690027204}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1690027208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690027204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771630757
 GameObject:
@@ -1473,7 +1583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1907524494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1588,6 +1698,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907524493}
   m_CullTransparentMesh: 0
+--- !u!1 &1982578561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982578563}
+  - component: {fileID: 1982578562}
+  m_Layer: 0
+  m_Name: Splash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1982578562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982578561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c8622a4e73142209ff42a931c8c26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveLength: 0.15
+  waveSpeed: 0.1
+  dampingCoefficient: 0.1
+  waveAmplitude: 0.5
+  splashPoint: {x: 0.5, y: 0, z: 0.5}
+  water: {fileID: 576794923}
+  obj: {fileID: 1690027204}
+--- !u!4 &1982578563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982578561}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2115194605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,6 +1853,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere
       objectReference: {fileID: 0}
+    - target: {fileID: 3817966043445672330, guid: fa134d50e3d68414fb40f2883ede5ba4,
+        type: 3}
+      propertyPath: Water
+      value: 
+      objectReference: {fileID: 576794923}
+    - target: {fileID: 3817966043445672330, guid: fa134d50e3d68414fb40f2883ede5ba4,
+        type: 3}
+      propertyPath: waterResistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3817966043445672333, guid: fa134d50e3d68414fb40f2883ede5ba4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1746,16 +1916,6 @@ PrefabInstance:
     - target: {fileID: 3817966043445672333, guid: fa134d50e3d68414fb40f2883ede5ba4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3817966043445672330, guid: fa134d50e3d68414fb40f2883ede5ba4,
-        type: 3}
-      propertyPath: Water
-      value: 
-      objectReference: {fileID: 576794923}
-    - target: {fileID: 3817966043445672330, guid: fa134d50e3d68414fb40f2883ede5ba4,
-        type: 3}
-      propertyPath: waterResistance
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
