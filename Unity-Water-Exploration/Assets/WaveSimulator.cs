@@ -12,12 +12,21 @@ public class WaveSimulator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.AddComponent<MeshRenderer>();
+        /*gameObject.AddComponent<MeshRenderer>();
         gameObject.AddComponent<MeshFilter>();
-        GetComponent<MeshFilter>().mesh = GenerateMesh();
+        GetComponent<MeshFilter>().mesh = GenerateMesh();*/
         timer = Time.time;
         gameObject.AddComponent<MeshCollider>();
         GetComponent<MeshCollider>().convex = true;
+
+
+        /*
+        for(int i = 0; i < GetComponent<MeshFilter>().mesh.vertices.Length; i += 1)
+        {
+            //GetComponent<MeshFilter>().mesh.vertices[i].x += 0.5f;
+            //GetComponent<MeshFilter>().mesh.vertices[i].z += 0.5f;
+            print(GetComponent<MeshFilter>().mesh.vertices[i].ToString());
+        }*/
 
     }
 
@@ -25,7 +34,7 @@ public class WaveSimulator : MonoBehaviour
     void Update()
     {
         float timePassed = Time.time % cycleTime;
-        float sinOffset = timePassed * Mathf.PI * 2f; //the width of the mesh that the sin passed through this frame
+        float sinOffset = (timePassed * Mathf.PI * 2f); //the width of the mesh that the sin passed through this frame
 
         AdjustMesh(sinOffset);
 
@@ -50,8 +59,8 @@ public class WaveSimulator : MonoBehaviour
             float rawSinInput = xProportion * 2f * Mathf.PI;
 
 
-            verts[i].y += (Mathf.Sin(rawSinInput + offset)) / (10f * (0.5f/waveLength));
-
+            verts[i].y += (Mathf.Sin(rawSinInput + offset)) / (5f * (0.5f/waveLength));
+           
         }
         GetComponent<MeshFilter>().mesh.vertices = verts;
     }
@@ -121,11 +130,14 @@ public class WaveSimulator : MonoBehaviour
         float yVelocity = Mathf.Abs(splashingObject.GetComponent<Rigidbody>().velocity.y);
         print("Y VELOCITY AT COLLISION IS: " + yVelocity.ToString());
 
-        float waveAmp = 0.045f * yVelocity;
+        float waveAmp = 0.1f * yVelocity;
         float dampingCoef =  0.60f - (Mathf.Clamp(yVelocity, 0f, 10f) * (2f/50f));  //y velocity mapped to 0.60-0.20
         float wavelength = splashingObject.GetComponent<Collider>().bounds.extents.x / 2f; //quarter the width of the colliding object
         Vector3 splashPoint = splashingObject.transform.position;
-        splashPoint = new Vector3(splashPoint.x / 16f, 0f, splashPoint.z /16f);
+
+        splashPoint = new Vector3(splashPoint.x / 16f, 0f, splashPoint.z / 16f);
+
+        print("splash point is: " + splashPoint.ToString());
 
         GameObject splash = new GameObject();
         splash.AddComponent<Splash>();

@@ -123,5 +123,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxNumSplashes: 3
-  activeTime: 10
-  fadeOutTime: 2
+  activeTime: 7
+  fadeOutTime: 3
