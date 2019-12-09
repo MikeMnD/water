@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -213,8 +213,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &56500733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,8 +231,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -494,8 +490,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -709,6 +703,228 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cycleTime: 5
   waveLength: 0.225
+--- !u!114 &576794925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576794923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6a1400e628d384ebdce68b3654c7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxModule:
+    moduleState: 2
+    moduleName: FX MODULE v1.9
+    systemOwner: {fileID: 576794925}
+    snowSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 1
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 10
+      fxSpecSmooth: {r: 0.3, g: 0.3, b: 0.3, a: 0.15}
+      furPenetration: 0.6
+      fxColor: {r: 1, g: 1, b: 1, a: 1}
+      normalFalloff: 0.45
+    bloodSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 0
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 30
+      fxSpecSmooth: {r: 0.15, g: 0, b: 0, a: 0}
+      furPenetration: 0.8
+      fxColor: {r: 0.5, g: 0, b: 0, a: 1}
+      normalFalloff: 0.45
+    waterSettings:
+      fxMode: 0
+      vanishOverTime: 1
+      windAffected: 1
+      clumpFur: 1
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: -1, z: 0}
+      fxIntensity: 1
+      vanishingTime: 10
+      fxSpecSmooth: {r: 0.3, g: 0.3, b: 0.3, a: 0.85}
+      furPenetration: 0.6
+      fxColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      normalFalloff: 0.45
+    customFX0Settings:
+      fxMode: 0
+      vanishOverTime: 0
+      windAffected: 0
+      clumpFur: 0
+      globalTexture: {fileID: 0}
+      furNormals: {fileID: 0}
+      direction: {x: 0, y: 0, z: 0}
+      fxIntensity: 0
+      vanishingTime: 0
+      fxSpecSmooth: {r: 0, g: 0, b: 0, a: 0}
+      furPenetration: 0
+      fxColor: {r: 0, g: 0, b: 0, a: 0}
+      normalFalloff: 0
+    forceUpdateNormals: 0
+    autoFixMeshTransform: 0
+    maxIterations: 4
+    affectedByLOD: 1
+    vertexBuffer: 512
+    localWindStrength: 0
+  lodModule:
+    moduleState: 0
+    moduleName: LOD MODULE 1.9
+    systemOwner: {fileID: 0}
+    lodMode: 0
+    maxDistance: 32
+    XFur_LODLevel: 0
+  physicsModule:
+    moduleState: 1
+    moduleName: PHYSICS MODULE 1.9
+    systemOwner: {fileID: 576794925}
+    useBasicPhysics: 0
+    useAngularPhysics: 1
+    inertia: 0.3
+    iterations: 45
+    physicsSensitivity: 0.33
+    physicsStrength: 0.2
+    gravityStrength: 0.94
+    autoDetectBones: 1
+    affectedByLOD: 0
+    bones: []
+  coatingModule:
+    moduleState: 0
+    moduleName: RANDOMIZATION MODULE 1.9
+    systemOwner: {fileID: 576794925}
+    coatingSettings:
+    - coatingProfiles: []
+      originalP:
+        fullShadowLayers: 8
+        enableFullShadows: 0
+        buffShadowLayers: 0
+        originalMat: {fileID: 2100000, guid: 2e2508365a416fb41b3d6e118ec4269a, type: 2}
+        buffOriginalMat: {fileID: 0}
+        furmatType: 0
+        furmatIndex: 0
+        furmatSamples: 2
+        furmatTriplanar: 0
+        furmatRenderSkin: 1
+        furmatForceUV2Grooming: 0
+        furmatCollision: 1
+        furmatShadowsMode: 0
+        furmatReadBaseSkin: 0
+        furmatReadBaseFur: 0
+        furmatReadFurNoise: 0
+        furmatAnisoOffset: 0.5
+        furmatTriplanarScale: 0.5
+        furmatBaseTex: {fileID: 0}
+        furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0,
+          type: 3}
+        furmatGlossSpecular: {fileID: 0}
+        furmatOcclusion: {fileID: 0}
+        furmatFurColorMap: {fileID: 0}
+        furmatFurNoiseMap: {fileID: 2800000, guid: 6d146c8e18f869c4798772e95cdea4c8,
+          type: 3}
+        furmatData0: {fileID: 0}
+        furmatData1: {fileID: 0}
+        furmatPainter: {fileID: 0}
+        furmatSpecular: {r: 0.19999966, g: 0.19999966, b: 0.19999966, a: 1}
+        furmatFurSpecular: {r: 0.4779411, g: 0.4440101, b: 0.40765557, a: 1}
+        furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+        furmatFurColorA: {r: 0.6691177, g: 0.3649772, b: 0.03935986, a: 1}
+        furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+        furmatSmoothness: 0.3
+        furmatFurSmoothness: 0.164
+        furmatFurOcclusion: 1
+        furmatFurCutoff: 0.165
+        furmatFurLength: 0.47
+        furmatFurThickness: 0.196
+        furmatUV1: 1
+        furmatFurUV1: 1
+        furmatFurUV2: 4
+        originalSynch: 0
+        furmatFurRim: {r: 0.59558815, g: 0.30579576, b: 0.11814926, a: 1}
+        furmatFurRimPower: 0.365
+        subRenders: []
+        furmatDirection: {x: 0.2, y: 0.2, z: 0.2, w: 0.2}
+    profileVariation: 0
+    randomizeAllParameters: 0
+  customModules: []
+  skinRenderer: {fileID: 0}
+  database: {fileID: 11400000, guid: b8fb2fcef60d4da42b4d7e073fc47726, type: 2}
+  srpMode: 0
+  instancedMode: 0
+  manualMeshIndex: 4
+  rend: {fileID: 576794927}
+  materialProfiles:
+  - fullShadowLayers: 8
+    enableFullShadows: 1
+    buffShadowLayers: -32
+    originalMat: {fileID: 2100000, guid: 2e2508365a416fb41b3d6e118ec4269a, type: 2}
+    buffOriginalMat: {fileID: 2100000, guid: 2e2508365a416fb41b3d6e118ec4269a, type: 2}
+    furmatType: 2
+    furmatIndex: 0
+    furmatSamples: 3
+    furmatTriplanar: 1
+    furmatRenderSkin: 1
+    furmatForceUV2Grooming: 0
+    furmatCollision: 1
+    furmatShadowsMode: 0
+    furmatReadBaseSkin: 0
+    furmatReadBaseFur: 0
+    furmatReadFurNoise: 0
+    furmatAnisoOffset: 0.5
+    furmatTriplanarScale: 1
+    furmatBaseTex: {fileID: 0}
+    furmatNormalmap: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+    furmatGlossSpecular: {fileID: 0}
+    furmatOcclusion: {fileID: 0}
+    furmatFurColorMap: {fileID: 0}
+    furmatFurNoiseMap: {fileID: 2800000, guid: 6d146c8e18f869c4798772e95cdea4c8, type: 3}
+    furmatData0: {fileID: 0}
+    furmatData1: {fileID: 0}
+    furmatPainter: {fileID: 0}
+    furmatSpecular: {r: 0.19999966, g: 0.19999966, b: 0.19999966, a: 1}
+    furmatFurSpecular: {r: 0.4779411, g: 0.4440101, b: 0.40765557, a: 1}
+    furmatBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    furmatFurColorA: {r: 0.6691177, g: 0.3649772, b: 0.03935986, a: 1}
+    furmatFurColorB: {r: 1, g: 1, b: 1, a: 1}
+    furmatSmoothness: 0.3
+    furmatFurSmoothness: 0.164
+    furmatFurOcclusion: 1
+    furmatFurCutoff: 0.165
+    furmatFurLength: 0.47
+    furmatFurThickness: 0.196
+    furmatUV1: 1
+    furmatFurUV1: 1
+    furmatFurUV2: 4
+    originalSynch: 1
+    furmatFurRim: {r: 0.59558815, g: 0.30579576, b: 0.11814926, a: 1}
+    furmatFurRimPower: 0.365
+    subRenders: []
+    furmatDirection: {x: 0, y: 0, z: 0, w: 0}
+  originalMesh: {fileID: -2432090755550338912, guid: b73ab74911cd643d382cc2a8f715e137,
+    type: 3}
+  materialProfileIndex: 0
+  updateDynamically: 1
+  bumpEmpty: {fileID: 2800000, guid: 2bef95333e7831641b1c7469c7b718c0, type: 3}
+  folds: 01000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!23 &576794927 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 780611a67e8e941a2b3aa96e5915a793,
+    type: 3}
+  m_PrefabInstance: {fileID: 1204554575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &610206133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1468,19 @@ PrefabInstance:
       propertyPath: m_ReflectionProbeUsage
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e2508365a416fb41b3d6e118ec4269a, type: 2}
+    - target: {fileID: 2300000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -8722365921612426893, guid: b8fb2fcef60d4da42b4d7e073fc47726,
+        type: 2}
     - target: {fileID: 11400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
       propertyPath: waterMode
       value: 2
@@ -1260,11 +1489,6 @@ PrefabInstance:
       propertyPath: disablePixelLights
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3300000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -2432090755550338912, guid: b73ab74911cd643d382cc2a8f715e137,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
 --- !u!1 &1572830093
@@ -1367,8 +1591,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -1579,8 +1801,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1907524496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,8 +1819,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
