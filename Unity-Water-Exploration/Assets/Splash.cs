@@ -5,7 +5,7 @@ using UnityEngine;
 public class Splash : MonoBehaviour
 {
     public float waveLength = 0.15f;
-    public float waveSpeed = 0.1f; //how many meters per second does the start of each ripple move?
+    public float waveSpeed = 0.06f; //how many meters per second does the start of each ripple move?
     public float dampingCoefficient = 0.65f;
     public float waveAmplitude = 0.5f; //the height of the splash before any damping occurs
 

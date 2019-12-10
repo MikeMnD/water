@@ -9,6 +9,9 @@ public class WaveSimulator : MonoBehaviour
     public float waveLength = 0.15f;
     private float timer;
 
+    public bool randomSplashes;
+    public float averageRandomSplashesPerSecond;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +41,13 @@ public class WaveSimulator : MonoBehaviour
 
         AdjustMesh(sinOffset);
 
+        if (randomSplashes){
+            HandlePoissonSplashOccurances();
+        }
+        else{
+            if (Input.anyKeyDown) MakeRandomSplash();
+        }
+
         /*
         if (Input.GetKeyDown(KeyCode.S))
         {
@@ -46,6 +56,16 @@ public class WaveSimulator : MonoBehaviour
             splash.GetComponent<Splash>().water = gameObject;
         }*/
 
+    }
+
+    private void HandlePoissonSplashOccurances()
+    {
+        float expectedSplashesSinceLastFrame = averageRandomSplashesPerSecond * Time.deltaTime;
+        float probabilityOfSplashThisFrame = expectedSplashesSinceLastFrame * Mathf.Exp(-1f * expectedSplashesSinceLastFrame); //poisson probability of one splash occuring
+        if (Random.value < probabilityOfSplashThisFrame)
+        {
+            MakeRandomSplash();
+        }
     }
 
     private void AdjustMesh(float offset)
@@ -125,6 +145,7 @@ public class WaveSimulator : MonoBehaviour
     }
 
 
+    //called when an object collides with the mesh
     public void MakeSplash(GameObject splashingObject)
     {
         float yVelocity = Mathf.Abs(splashingObject.GetComponent<Rigidbody>().velocity.y);
@@ -138,6 +159,26 @@ public class WaveSimulator : MonoBehaviour
         splashPoint = new Vector3(splashPoint.x / 16f, 0f, splashPoint.z / 16f);
 
         print("splash point is: " + splashPoint.ToString());
+
+        GameObject splash = new GameObject();
+        splash.AddComponent<Splash>();
+        splash.GetComponent<Splash>().water = gameObject;
+        splash.GetComponent<Splash>().SetAmplitude(waveAmp);
+        splash.GetComponent<Splash>().SetDampeningCoef(dampingCoef);
+        splash.GetComponent<Splash>().SetWavelength(waveLength);
+        splash.GetComponent<Splash>().SetSplashPoint(splashPoint);
+    }
+
+
+    public void MakeRandomSplash()
+    {
+        float yVelocity = (Random.value * 10f) + 5f; //random y velocity magnitude between 5 and 15
+
+        float waveAmp = 0.065f * yVelocity;
+        float dampingCoef = 0.60f - (Mathf.Clamp(yVelocity, 0f, 10f) * (2f / 50f));  //y velocity mapped to 0.60-0.20
+        float wavelength = (Random.value * 0.75f) + 0.25f; //between 0.25f and 1f
+
+        Vector3 splashPoint = new Vector3((Random.value * 0.8f) + 0.1f, 0f, (Random.value * 0.8f) + 0.1f); //random point on the mesh between (0.1, 0.1) and (0.9, 0.9)
 
         GameObject splash = new GameObject();
         splash.AddComponent<Splash>();

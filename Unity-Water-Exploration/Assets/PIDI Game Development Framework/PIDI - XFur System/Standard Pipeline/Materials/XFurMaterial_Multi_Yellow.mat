@@ -100,11 +100,11 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FurCutoff: 0.1
-    - _FurLength: 2.46
+    - _FurLength: 2.55
     - _FurOcclusion: 1
     - _FurRimStrength: 0.51
     - _FurSmoothness: 0.14
-    - _FurThin: 0.22
+    - _FurThin: 0.27
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -138,7 +138,7 @@ Material:
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FurColorA: {r: 0.6691177, g: 0.3649772, b: 0.03935986, a: 1}
-    - _FurColorB: {r: 1, g: 1, b: 1, a: 1}
+    - _FurColorB: {r: 0.5566038, g: 0.28492123, b: 0.04988429, a: 1}
     - _FurDirection: {r: 0, g: 0, b: 0, a: 0}
     - _FurSpecular: {r: 0.4779411, g: 0.4440101, b: 0.40765557, a: 1}
     - _RimColor: {r: 0.59558815, g: 0.30579576, b: 0.11814926, a: 1}
