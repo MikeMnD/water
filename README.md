@@ -1,3 +1,3 @@
 #Water bot project
 
-Currently under construction
+Code to remotely move and control a hexapod robot
